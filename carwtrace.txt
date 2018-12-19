@@ -2,434 +2,358 @@ OOSimL model: Simple Car-Wash System
 Simulation date: 12/20/2018 time: 1:32
 ------------------------- TRACE ---------------------------------
 Time: 0 Car Wash Shop holds for 1200
-Time: 0 Arrivals  holds for 10.488
+Time: 0 Arrivals  holds for 8.703
 Time: 0 Wash_machine goes idle
 Time: 0 Wash_machine deactivated
 Time: 0 Wash_machine goes idle
 Time: 0 Wash_machine deactivated
 Time: 0 Wash_machine goes idle
 Time: 0 Wash_machine deactivated
-Time: 10.488 Arrivals creating Car
-Time: 10.488 Arrivals  holds for 5.705
-Time: 10.488 Car1 joins queue 
-Time: 10.488 Car1 enqueued into Customer Queue
-Time: 10.488 Car1 deactivated
-Time: 10.488 Wash_machine goes idle
-Time: 10.488 Wash_machine deactivated
-Time: 16.192 Arrivals creating Car
-Time: 16.192 Arrivals  holds for 3.165
-Time: 16.192 Car2 joins queue 
-Time: 16.192 Car2 enqueued into Customer Queue
-Time: 16.192 Car2 deactivated
-Time: 16.192 Car1 dequeued from Customer Queue
-Time: 16.192 Wash_machine begins service of: Car1
-Time: 16.192 Wash_machine holds for 12.809
-Time: 19.357 Arrivals creating Car
-Time: 19.357 Arrivals  holds for 0.87
-Time: 19.357 Car3 joins queue 
-Time: 19.357 Car3 enqueued into Customer Queue
-Time: 19.357 Car3 deactivated
-Time: 19.357 Wash_machine goes idle
-Time: 19.357 Wash_machine deactivated
-Time: 20.227 Arrivals creating Car
-Time: 20.227 Arrivals  holds for 5.595
-Time: 20.227 Car4 joins queue 
-Time: 20.227 Car4 enqueued into Customer Queue
-Time: 20.227 Car4 deactivated
-Time: 20.227 Car2 dequeued from Customer Queue
-Time: 20.227 Wash_machine begins service of: Car2
-Time: 20.227 Wash_machine holds for 10.58
-Time: 25.822 Arrivals creating Car
-Time: 25.822 Arrivals  holds for 12.075
-Time: 25.822 Car5 joins queue 
-Time: 25.822 Car5 enqueued into Customer Queue
-Time: 25.822 Car5 deactivated
-Time: 25.822 Wash_machine goes idle
-Time: 25.822 Wash_machine deactivated
-Time: 29.001 Wash_machine completes service of: Car1
-Time: 29.001 Wash_machine goes idle
-Time: 29.001 Wash_machine deactivated
-Time: 29.001 Car1 terminating
-Time: 30.807 Wash_machine completes service of: Car2
-Time: 30.807 Wash_machine goes idle
-Time: 30.807 Wash_machine deactivated
-Time: 30.807 Car2 terminating
-Time: 37.897 Arrivals creating Car
-Time: 37.897 Arrivals  holds for 0.547
-Time: 37.897 Car6 joins queue 
-Time: 37.897 Car6 enqueued into Customer Queue
-Time: 37.897 Car6 deactivated
-Time: 37.897 Wash_machine goes idle
-Time: 37.897 Wash_machine deactivated
-Time: 38.445 Arrivals creating Car
-Time: 38.445 Arrivals  holds for 0.377
-Time: 38.445 Car7 joins queue 
-Time: 38.445 Car7 enqueued into Customer Queue
-Time: 38.445 Car7 deactivated
-Time: 38.445 Car3 dequeued from Customer Queue
-Time: 38.445 Wash_machine begins service of: Car3
-Time: 38.445 Wash_machine holds for 10.344
-Time: 38.821 Arrivals creating Car
-Time: 38.821 Arrivals  holds for 1.202
-Time: 38.821 Car8 joins queue 
-Time: 38.821 Car8 enqueued into Customer Queue
-Time: 38.821 Car8 deactivated
-Time: 38.821 Wash_machine goes idle
-Time: 38.821 Wash_machine deactivated
-Time: 40.024 Arrivals creating Car
-Time: 40.024 Arrivals  holds for 25.436
-Time: 40.024 Car9 joins queue 
-Time: 40.024 Car9 enqueued into Customer Queue
-Time: 40.024 Car9 deactivated
-Time: 40.024 Car4 dequeued from Customer Queue
-Time: 40.024 Wash_machine begins service of: Car4
-Time: 40.024 Wash_machine holds for 13.137
-Time: 48.788 Wash_machine completes service of: Car3
-Time: 48.788 Wash_machine goes idle
-Time: 48.788 Wash_machine deactivated
-Time: 48.788 Car3 terminating
-Time: 53.16 Wash_machine completes service of: Car4
-Time: 53.16 Wash_machine goes idle
-Time: 53.16 Wash_machine deactivated
-Time: 53.16 Car4 terminating
-Time: 65.46 Arrivals creating Car
-Time: 65.46 Arrivals  holds for 1.756
-Time: 65.46 Car10 joins queue 
-Time: 65.46 Car10 enqueued into Customer Queue
-Time: 65.46 Car10 deactivated
-Time: 65.46 Wash_machine goes idle
-Time: 65.46 Wash_machine deactivated
-Time: 67.216 Arrivals creating Car
-Time: 67.216 Arrivals  holds for 3.21
-Time: 67.216 Car11 joins queue 
-Time: 67.216 Car11 enqueued into Customer Queue
-Time: 67.216 Car11 deactivated
-Time: 67.216 Car5 dequeued from Customer Queue
-Time: 67.216 Wash_machine begins service of: Car5
-Time: 67.216 Wash_machine holds for 11.022
-Time: 70.425 Arrivals creating Car
-Time: 70.425 Arrivals  holds for 15.452
-Time: 70.425 Car12 joins queue 
-Time: 70.425 Car12 enqueued into Customer Queue
-Time: 70.425 Car12 deactivated
-Time: 70.425 Wash_machine goes idle
-Time: 70.425 Wash_machine deactivated
-Time: 78.237 Wash_machine completes service of: Car5
-Time: 78.237 Wash_machine goes idle
-Time: 78.237 Wash_machine deactivated
-Time: 78.237 Car5 terminating
-Time: 85.877 Arrivals creating Car
-Time: 85.877 Arrivals  holds for 1.174
-Time: 85.877 Car13 joins queue 
-Time: 85.877 Car13 enqueued into Customer Queue
-Time: 85.877 Car13 deactivated
-Time: 85.877 Wash_machine goes idle
-Time: 85.877 Wash_machine deactivated
-Time: 87.051 Arrivals creating Car
-Time: 87.051 Arrivals  holds for 5.455
-Time: 87.051 Car14 joins queue 
-Time: 87.051 Car14 enqueued into Customer Queue
-Time: 87.051 Car14 deactivated
-Time: 87.051 Car6 dequeued from Customer Queue
-Time: 87.051 Wash_machine begins service of: Car6
-Time: 87.051 Wash_machine holds for 10.46
-Time: 92.506 Arrivals creating Car
-Time: 92.506 Arrivals  holds for 8.462
-Time: 92.506 Car15 joins queue 
-Time: 92.506 Car15 enqueued into Customer Queue
-Time: 92.506 Car15 deactivated
-Time: 92.506 Car7 dequeued from Customer Queue
-Time: 92.506 Wash_machine begins service of: Car7
-Time: 92.506 Wash_machine holds for 11.622
-Time: 97.511 Wash_machine completes service of: Car6
-Time: 97.511 Wash_machine goes idle
-Time: 97.511 Wash_machine deactivated
-Time: 97.511 Car6 terminating
-Time: 100.968 Arrivals creating Car
-Time: 100.968 Arrivals  holds for 4.841
-Time: 100.968 Car16 joins queue 
-Time: 100.968 Car16 enqueued into Customer Queue
-Time: 100.968 Car16 deactivated
-Time: 100.968 Wash_machine goes idle
-Time: 100.968 Wash_machine deactivated
-Time: 104.128 Wash_machine completes service of: Car7
-Time: 104.128 Wash_machine goes idle
-Time: 104.128 Wash_machine deactivated
-Time: 104.128 Car7 terminating
-Time: 105.809 Arrivals creating Car
-Time: 105.809 Arrivals  holds for 14.3
-Time: 105.809 Car17 joins queue 
-Time: 105.809 Car17 enqueued into Customer Queue
-Time: 105.809 Car17 deactivated
-Time: 105.809 Car8 dequeued from Customer Queue
-Time: 105.809 Wash_machine begins service of: Car8
-Time: 105.809 Wash_machine holds for 12.167
-Time: 117.976 Wash_machine completes service of: Car8
-Time: 117.976 Wash_machine goes idle
-Time: 117.976 Wash_machine deactivated
-Time: 117.976 Car8 terminating
-Time: 120.109 Arrivals creating Car
-Time: 120.109 Arrivals  holds for 4.202
-Time: 120.109 Car18 joins queue 
-Time: 120.109 Car18 enqueued into Customer Queue
-Time: 120.109 Car18 deactivated
-Time: 120.109 Wash_machine goes idle
-Time: 120.109 Wash_machine deactivated
-Time: 124.311 Arrivals creating Car
-Time: 124.311 Arrivals  holds for 3.436
-Time: 124.311 Car19 joins queue 
-Time: 124.311 Car19 enqueued into Customer Queue
-Time: 124.311 Car19 deactivated
-Time: 124.311 Car9 dequeued from Customer Queue
-Time: 124.311 Wash_machine begins service of: Car9
-Time: 124.311 Wash_machine holds for 11.664
-Time: 127.747 Arrivals creating Car
-Time: 127.747 Arrivals  holds for 10.437
-Time: 127.747 Car20 joins queue 
-Time: 127.747 Car20 enqueued into Customer Queue
-Time: 127.747 Car20 deactivated
-Time: 127.747 Wash_machine goes idle
-Time: 127.747 Wash_machine deactivated
-Time: 135.976 Wash_machine completes service of: Car9
-Time: 135.976 Wash_machine goes idle
-Time: 135.976 Wash_machine deactivated
-Time: 135.976 Car9 terminating
-Time: 138.184 Arrivals creating Car
-Time: 138.184 Arrivals  holds for 2.263
-Time: 138.184 Car21 joins queue 
-Time: 138.184 Car21 enqueued into Customer Queue
-Time: 138.184 Car21 deactivated
-Time: 138.184 Wash_machine goes idle
-Time: 138.184 Wash_machine deactivated
-Time: 140.447 Arrivals creating Car
-Time: 140.447 Arrivals  holds for 0.67
-Time: 140.447 Car22 joins queue 
-Time: 140.447 Car22 enqueued into Customer Queue
-Time: 140.447 Car22 deactivated
-Time: 140.447 Car10 dequeued from Customer Queue
-Time: 140.447 Wash_machine begins service of: Car10
-Time: 140.447 Wash_machine holds for 11.324
-Time: 141.117 Arrivals creating Car
-Time: 141.117 Arrivals  holds for 3.798
-Time: 141.117 Car23 joins queue 
-Time: 141.117 Car23 enqueued into Customer Queue
-Time: 141.117 Car23 deactivated
-Time: 141.117 Car11 dequeued from Customer Queue
-Time: 141.117 Wash_machine begins service of: Car11
-Time: 141.117 Wash_machine holds for 9.535
-Time: 144.915 Arrivals creating Car
-Time: 144.915 Arrivals  holds for 14.339
-Time: 144.915 Car24 joins queue 
-Time: 144.915 Car24 enqueued into Customer Queue
-Time: 144.915 Car24 deactivated
-Time: 144.915 Car12 dequeued from Customer Queue
-Time: 144.915 Wash_machine begins service of: Car12
-Time: 144.915 Wash_machine holds for 11.198
-Time: 150.652 Wash_machine completes service of: Car11
-Time: 150.652 Wash_machine goes idle
-Time: 150.652 Wash_machine deactivated
-Time: 150.652 Car11 terminating
-Time: 151.771 Wash_machine completes service of: Car10
-Time: 151.771 Wash_machine goes idle
-Time: 151.771 Wash_machine deactivated
-Time: 151.771 Car10 terminating
-Time: 156.113 Wash_machine completes service of: Car12
-Time: 156.113 Wash_machine goes idle
-Time: 156.113 Wash_machine deactivated
-Time: 156.113 Car12 terminating
-Time: 159.254 Arrivals creating Car
-Time: 159.254 Arrivals  holds for 2.343
-Time: 159.254 Car25 joins queue 
-Time: 159.254 Car25 enqueued into Customer Queue
-Time: 159.254 Car25 deactivated
-Time: 159.254 Wash_machine goes idle
-Time: 159.254 Wash_machine deactivated
-Time: 161.597 Arrivals creating Car
-Time: 161.597 Arrivals  holds for 6.68
-Time: 161.597 Car26 joins queue 
-Time: 161.597 Car26 enqueued into Customer Queue
-Time: 161.597 Car26 deactivated
-Time: 161.597 Car13 dequeued from Customer Queue
-Time: 161.597 Wash_machine begins service of: Car13
-Time: 161.597 Wash_machine holds for 9.486
-Time: 168.276 Arrivals creating Car
-Time: 168.276 Arrivals  holds for 1.445
-Time: 168.276 Car27 joins queue 
-Time: 168.276 Car27 enqueued into Customer Queue
-Time: 168.276 Car27 deactivated
-Time: 168.276 Wash_machine goes idle
-Time: 168.276 Wash_machine deactivated
-Time: 169.722 Arrivals creating Car
-Time: 169.722 Arrivals  holds for 0.929
-Time: 169.722 Car28 joins queue 
-Time: 169.722 Car28 enqueued into Customer Queue
-Time: 169.722 Car28 deactivated
-Time: 169.722 Car14 dequeued from Customer Queue
-Time: 169.722 Wash_machine begins service of: Car14
-Time: 169.722 Wash_machine holds for 11.533
-Time: 170.65 Arrivals creating Car
-Time: 170.65 Arrivals  holds for 0.854
-Time: 170.65 Car29 joins queue 
-Time: 170.65 Car29 enqueued into Customer Queue
-Time: 170.65 Car29 deactivated
-Time: 170.65 Wash_machine goes idle
-Time: 170.65 Wash_machine deactivated
-Time: 171.083 Wash_machine completes service of: Car13
-Time: 171.083 Wash_machine goes idle
-Time: 171.083 Wash_machine deactivated
-Time: 171.083 Car13 terminating
-Time: 171.505 Arrivals creating Car
-Time: 171.505 Arrivals  holds for 3.351
-Time: 171.505 Car30 joins queue 
-Time: 171.505 Car30 enqueued into Customer Queue
-Time: 171.505 Car30 deactivated
-Time: 171.505 Wash_machine goes idle
-Time: 171.505 Wash_machine deactivated
-Time: 174.856 Arrivals creating Car
-Time: 174.856 Arrivals  holds for 31.137
-Time: 174.856 Car31 joins queue 
-Time: 174.856 Car31 enqueued into Customer Queue
-Time: 174.856 Car31 deactivated
-Time: 174.856 Car15 dequeued from Customer Queue
-Time: 174.856 Wash_machine begins service of: Car15
-Time: 174.856 Wash_machine holds for 9.083
-Time: 181.255 Wash_machine completes service of: Car14
-Time: 181.255 Wash_machine goes idle
-Time: 181.255 Wash_machine deactivated
-Time: 181.255 Car14 terminating
-Time: 183.939 Wash_machine completes service of: Car15
-Time: 183.939 Wash_machine goes idle
-Time: 183.939 Wash_machine deactivated
-Time: 183.939 Car15 terminating
-Time: 205.993 Arrivals creating Car
-Time: 205.993 Arrivals  holds for 31.153
-Time: 205.993 Car32 joins queue 
-Time: 205.993 Car32 enqueued into Customer Queue
-Time: 205.993 Car32 deactivated
-Time: 205.993 Wash_machine goes idle
-Time: 205.993 Wash_machine deactivated
-Time: 237.147 Arrivals creating Car
-Time: 237.147 Arrivals  holds for 10.665
-Time: 237.147 Car33 joins queue 
-Time: 237.147 Car33 enqueued into Customer Queue
-Time: 237.147 Car33 deactivated
-Time: 237.147 Car16 dequeued from Customer Queue
-Time: 237.147 Wash_machine begins service of: Car16
-Time: 237.147 Wash_machine holds for 11.222
-Time: 247.812 Arrivals creating Car
-Time: 247.812 Arrivals  holds for 5.974
-Time: 247.812 Car34 joins queue 
-Time: 247.812 Car34 enqueued into Customer Queue
-Time: 247.812 Car34 deactivated
-Time: 247.812 Wash_machine goes idle
-Time: 247.812 Wash_machine deactivated
-Time: 248.369 Wash_machine completes service of: Car16
-Time: 248.369 Wash_machine goes idle
-Time: 248.369 Wash_machine deactivated
-Time: 248.369 Car16 terminating
-Time: 253.786 Arrivals creating Car
-Time: 253.786 Arrivals  holds for 1.4
-Time: 253.786 Car35 joins queue 
-Time: 253.786 Car35 enqueued into Customer Queue
-Time: 253.786 Car35 deactivated
-Time: 253.786 Wash_machine goes idle
-Time: 253.786 Wash_machine deactivated
-Time: 255.186 Arrivals creating Car
-Time: 255.186 Arrivals  holds for 0.765
-Time: 255.186 Car36 joins queue 
-Time: 255.186 Car36 enqueued into Customer Queue
-Time: 255.186 Car36 deactivated
-Time: 255.186 Car17 dequeued from Customer Queue
-Time: 255.186 Wash_machine begins service of: Car17
-Time: 255.186 Wash_machine holds for 10.937
-Time: 255.95 Arrivals creating Car
-Time: 255.95 Arrivals  holds for 8.661
-Time: 255.95 Car37 joins queue 
-Time: 255.95 Car37 enqueued into Customer Queue
-Time: 255.95 Car37 deactivated
-Time: 255.95 Car18 dequeued from Customer Queue
-Time: 255.95 Wash_machine begins service of: Car18
-Time: 255.95 Wash_machine holds for 9.021
-Time: 264.611 Arrivals creating Car
-Time: 264.611 Arrivals  holds for 7.335
-Time: 264.611 Car38 joins queue 
-Time: 264.611 Car38 enqueued into Customer Queue
-Time: 264.611 Car38 deactivated
-Time: 264.611 Car19 dequeued from Customer Queue
-Time: 264.611 Wash_machine begins service of: Car19
-Time: 264.611 Wash_machine holds for 11.395
-Time: 264.971 Wash_machine completes service of: Car18
-Time: 264.971 Wash_machine goes idle
-Time: 264.971 Wash_machine deactivated
-Time: 264.971 Car18 terminating
-Time: 266.122 Wash_machine completes service of: Car17
-Time: 266.122 Wash_machine goes idle
-Time: 266.122 Wash_machine deactivated
-Time: 266.122 Car17 terminating
-Time: 271.946 Arrivals creating Car
-Time: 271.946 Arrivals  holds for 9.846
-Time: 271.946 Car39 joins queue 
-Time: 271.946 Car39 enqueued into Customer Queue
-Time: 271.946 Car39 deactivated
-Time: 271.946 Wash_machine goes idle
-Time: 271.946 Wash_machine deactivated
-Time: 276.006 Wash_machine completes service of: Car19
-Time: 276.006 Wash_machine goes idle
-Time: 276.006 Wash_machine deactivated
-Time: 276.006 Car19 terminating
-Time: 281.793 Arrivals creating Car
-Time: 281.793 Arrivals  holds for 8.99
-Time: 281.793 Car40 joins queue 
-Time: 281.793 Car40 enqueued into Customer Queue
-Time: 281.793 Car40 deactivated
-Time: 281.793 Car20 dequeued from Customer Queue
-Time: 281.793 Wash_machine begins service of: Car20
-Time: 281.793 Wash_machine holds for 10.903
-Time: 290.783 Arrivals creating Car
-Time: 290.783 Arrivals  holds for 4.947
-Time: 290.783 Car41 joins queue 
-Time: 290.783 Car41 enqueued into Customer Queue
-Time: 290.783 Car41 deactivated
-Time: 290.783 Wash_machine goes idle
-Time: 290.783 Wash_machine deactivated
-Time: 292.696 Wash_machine completes service of: Car20
-Time: 292.696 Wash_machine goes idle
-Time: 292.696 Wash_machine deactivated
-Time: 292.696 Car20 terminating
-Time: 295.729 Arrivals creating Car
-Time: 295.729 Arrivals  holds for 3.707
-Time: 295.729 Car42 joins queue 
-Time: 295.729 Car42 enqueued into Customer Queue
-Time: 295.729 Car42 deactivated
-Time: 295.729 Wash_machine goes idle
-Time: 295.729 Wash_machine deactivated
-Time: 299.436 Arrivals creating Car
-Time: 299.436 Arrivals  holds for 11.411
-Time: 299.436 Car43 joins queue 
-Time: 299.436 Car43 enqueued into Customer Queue
-Time: 299.436 Car43 deactivated
-Time: 299.436 Car21 dequeued from Customer Queue
-Time: 299.436 Wash_machine begins service of: Car21
-Time: 299.436 Wash_machine holds for 14.984
-Time: 310.848 Arrivals creating Car
-Time: 310.848 Arrivals  terminating
-Time: 310.848 Car44 joins queue 
-Time: 310.848 Car44 enqueued into Customer Queue
-Time: 310.848 Car44 deactivated
-Time: 310.848 Car22 dequeued from Customer Queue
-Time: 310.848 Wash_machine begins service of: Car22
-Time: 310.848 Wash_machine holds for 10.604
-Time: 314.421 Wash_machine completes service of: Car21
-Time: 314.421 Wash_machine goes idle
-Time: 314.421 Wash_machine deactivated
-Time: 314.421 Car21 terminating
-Time: 321.452 Wash_machine completes service of: Car22
-Time: 321.452 Wash_machine goes idle
-Time: 321.452 Wash_machine deactivated
-Time: 321.452 Car22 terminating
+Time: 8.703 Arrivals creating Car
+Time: 8.703 Arrivals  holds for 1.353
+Time: 8.703 Car1 joins queue 
+Time: 8.703 Car1 enqueued into Customer Queue
+Time: 8.703 Car1 deactivated
+Time: 8.703 Wash_machine goes idle
+Time: 8.703 Wash_machine deactivated
+Time: 10.055 Arrivals creating Car
+Time: 10.055 Arrivals  holds for 20.459
+Time: 10.055 Car2 joins queue 
+Time: 10.055 Car2 enqueued into Customer Queue
+Time: 10.055 Car2 deactivated
+Time: 10.055 Car1 dequeued from Customer Queue
+Time: 10.055 Wash_machine begins service of: Car1
+Time: 10.055 Wash_machine holds for 11.815
+Time: 21.87 Wash_machine completes service of: Car1
+Time: 21.87 Wash_machine goes idle
+Time: 21.87 Wash_machine deactivated
+Time: 21.87 Car1 terminating
+Time: 30.514 Arrivals creating Car
+Time: 30.514 Arrivals  holds for 11.324
+Time: 30.514 Car3 joins queue 
+Time: 30.514 Car3 enqueued into Customer Queue
+Time: 30.514 Car3 deactivated
+Time: 30.514 Wash_machine goes idle
+Time: 30.514 Wash_machine deactivated
+Time: 41.838 Arrivals creating Car
+Time: 41.838 Arrivals  holds for 14.319
+Time: 41.838 Car4 joins queue 
+Time: 41.838 Car4 enqueued into Customer Queue
+Time: 41.838 Car4 deactivated
+Time: 41.838 Car2 dequeued from Customer Queue
+Time: 41.838 Wash_machine begins service of: Car2
+Time: 41.838 Wash_machine holds for 10.166
+Time: 52.004 Wash_machine completes service of: Car2
+Time: 52.004 Wash_machine goes idle
+Time: 52.004 Wash_machine deactivated
+Time: 52.004 Car2 terminating
+Time: 56.157 Arrivals creating Car
+Time: 56.157 Arrivals  holds for 4.061
+Time: 56.157 Car5 joins queue 
+Time: 56.157 Car5 enqueued into Customer Queue
+Time: 56.157 Car5 deactivated
+Time: 56.157 Wash_machine goes idle
+Time: 56.157 Wash_machine deactivated
+Time: 60.218 Arrivals creating Car
+Time: 60.218 Arrivals  holds for 10.41
+Time: 60.218 Car6 joins queue 
+Time: 60.218 Car6 enqueued into Customer Queue
+Time: 60.218 Car6 deactivated
+Time: 60.218 Car3 dequeued from Customer Queue
+Time: 60.218 Wash_machine begins service of: Car3
+Time: 60.218 Wash_machine holds for 10.466
+Time: 70.628 Arrivals creating Car
+Time: 70.628 Arrivals  holds for 9.592
+Time: 70.628 Car7 joins queue 
+Time: 70.628 Car7 enqueued into Customer Queue
+Time: 70.628 Car7 deactivated
+Time: 70.628 Wash_machine goes idle
+Time: 70.628 Wash_machine deactivated
+Time: 70.684 Wash_machine completes service of: Car3
+Time: 70.684 Wash_machine goes idle
+Time: 70.684 Wash_machine deactivated
+Time: 70.684 Car3 terminating
+Time: 80.22 Arrivals creating Car
+Time: 80.22 Arrivals  holds for 5.911
+Time: 80.22 Car8 joins queue 
+Time: 80.22 Car8 enqueued into Customer Queue
+Time: 80.22 Car8 deactivated
+Time: 80.22 Wash_machine goes idle
+Time: 80.22 Wash_machine deactivated
+Time: 86.131 Arrivals creating Car
+Time: 86.131 Arrivals  holds for 15.813
+Time: 86.131 Car9 joins queue 
+Time: 86.131 Car9 enqueued into Customer Queue
+Time: 86.131 Car9 deactivated
+Time: 86.131 Car4 dequeued from Customer Queue
+Time: 86.131 Wash_machine begins service of: Car4
+Time: 86.131 Wash_machine holds for 10.65
+Time: 96.78 Wash_machine completes service of: Car4
+Time: 96.78 Wash_machine goes idle
+Time: 96.78 Wash_machine deactivated
+Time: 96.78 Car4 terminating
+Time: 101.944 Arrivals creating Car
+Time: 101.944 Arrivals  holds for 11.155
+Time: 101.944 Car10 joins queue 
+Time: 101.944 Car10 enqueued into Customer Queue
+Time: 101.944 Car10 deactivated
+Time: 101.944 Wash_machine goes idle
+Time: 101.944 Wash_machine deactivated
+Time: 113.099 Arrivals creating Car
+Time: 113.099 Arrivals  holds for 3.188
+Time: 113.099 Car11 joins queue 
+Time: 113.099 Car11 enqueued into Customer Queue
+Time: 113.099 Car11 deactivated
+Time: 113.099 Car5 dequeued from Customer Queue
+Time: 113.099 Wash_machine begins service of: Car5
+Time: 113.099 Wash_machine holds for 11.182
+Time: 116.287 Arrivals creating Car
+Time: 116.287 Arrivals  holds for 1.105
+Time: 116.287 Car12 joins queue 
+Time: 116.287 Car12 enqueued into Customer Queue
+Time: 116.287 Car12 deactivated
+Time: 116.287 Car6 dequeued from Customer Queue
+Time: 116.287 Wash_machine begins service of: Car6
+Time: 116.287 Wash_machine holds for 10.202
+Time: 117.392 Arrivals creating Car
+Time: 117.392 Arrivals  holds for 1.958
+Time: 117.392 Car13 joins queue 
+Time: 117.392 Car13 enqueued into Customer Queue
+Time: 117.392 Car13 deactivated
+Time: 117.392 Wash_machine goes idle
+Time: 117.392 Wash_machine deactivated
+Time: 119.35 Arrivals creating Car
+Time: 119.35 Arrivals  holds for 2.83
+Time: 119.35 Car14 joins queue 
+Time: 119.35 Car14 enqueued into Customer Queue
+Time: 119.35 Car14 deactivated
+Time: 119.35 Car7 dequeued from Customer Queue
+Time: 119.35 Wash_machine begins service of: Car7
+Time: 119.35 Wash_machine holds for 10.057
+Time: 122.179 Arrivals creating Car
+Time: 122.179 Arrivals  holds for 23.912
+Time: 122.179 Car15 joins queue 
+Time: 122.179 Car15 enqueued into Customer Queue
+Time: 122.179 Car15 deactivated
+Time: 124.281 Wash_machine completes service of: Car5
+Time: 124.281 Wash_machine goes idle
+Time: 124.281 Wash_machine deactivated
+Time: 124.281 Car5 terminating
+Time: 126.489 Wash_machine completes service of: Car6
+Time: 126.489 Wash_machine goes idle
+Time: 126.489 Wash_machine deactivated
+Time: 126.489 Car6 terminating
+Time: 129.406 Wash_machine completes service of: Car7
+Time: 129.406 Wash_machine goes idle
+Time: 129.406 Wash_machine deactivated
+Time: 129.406 Car7 terminating
+Time: 146.091 Arrivals creating Car
+Time: 146.091 Arrivals  holds for 0.217
+Time: 146.091 Car16 joins queue 
+Time: 146.091 Car16 enqueued into Customer Queue
+Time: 146.091 Car16 deactivated
+Time: 146.091 Wash_machine goes idle
+Time: 146.091 Wash_machine deactivated
+Time: 146.308 Arrivals creating Car
+Time: 146.308 Arrivals  holds for 10.938
+Time: 146.308 Car17 joins queue 
+Time: 146.308 Car17 enqueued into Customer Queue
+Time: 146.308 Car17 deactivated
+Time: 146.308 Car8 dequeued from Customer Queue
+Time: 146.308 Wash_machine begins service of: Car8
+Time: 146.308 Wash_machine holds for 9.058
+Time: 155.366 Wash_machine completes service of: Car8
+Time: 155.366 Wash_machine goes idle
+Time: 155.366 Wash_machine deactivated
+Time: 155.366 Car8 terminating
+Time: 157.246 Arrivals creating Car
+Time: 157.246 Arrivals  holds for 2.429
+Time: 157.246 Car18 joins queue 
+Time: 157.246 Car18 enqueued into Customer Queue
+Time: 157.246 Car18 deactivated
+Time: 157.246 Wash_machine goes idle
+Time: 157.246 Wash_machine deactivated
+Time: 159.676 Arrivals creating Car
+Time: 159.676 Arrivals  holds for 8.646
+Time: 159.676 Car19 joins queue 
+Time: 159.676 Car19 enqueued into Customer Queue
+Time: 159.676 Car19 deactivated
+Time: 159.676 Car9 dequeued from Customer Queue
+Time: 159.676 Wash_machine begins service of: Car9
+Time: 159.676 Wash_machine holds for 10.078
+Time: 168.322 Arrivals creating Car
+Time: 168.322 Arrivals  holds for 6.546
+Time: 168.322 Car20 joins queue 
+Time: 168.322 Car20 enqueued into Customer Queue
+Time: 168.322 Car20 deactivated
+Time: 168.322 Wash_machine goes idle
+Time: 168.322 Wash_machine deactivated
+Time: 169.754 Wash_machine completes service of: Car9
+Time: 169.754 Wash_machine goes idle
+Time: 169.754 Wash_machine deactivated
+Time: 169.754 Car9 terminating
+Time: 174.867 Arrivals creating Car
+Time: 174.867 Arrivals  holds for 16.884
+Time: 174.867 Car21 joins queue 
+Time: 174.867 Car21 enqueued into Customer Queue
+Time: 174.867 Car21 deactivated
+Time: 174.867 Wash_machine goes idle
+Time: 174.867 Wash_machine deactivated
+Time: 191.751 Arrivals creating Car
+Time: 191.751 Arrivals  holds for 13.944
+Time: 191.751 Car22 joins queue 
+Time: 191.751 Car22 enqueued into Customer Queue
+Time: 191.751 Car22 deactivated
+Time: 191.751 Car10 dequeued from Customer Queue
+Time: 191.751 Wash_machine begins service of: Car10
+Time: 191.751 Wash_machine holds for 11.778
+Time: 203.529 Wash_machine completes service of: Car10
+Time: 203.529 Wash_machine goes idle
+Time: 203.529 Wash_machine deactivated
+Time: 203.529 Car10 terminating
+Time: 205.696 Arrivals creating Car
+Time: 205.696 Arrivals  holds for 11.18
+Time: 205.696 Car23 joins queue 
+Time: 205.696 Car23 enqueued into Customer Queue
+Time: 205.696 Car23 deactivated
+Time: 205.696 Wash_machine goes idle
+Time: 205.696 Wash_machine deactivated
+Time: 216.876 Arrivals creating Car
+Time: 216.876 Arrivals  holds for 5.624
+Time: 216.876 Car24 joins queue 
+Time: 216.876 Car24 enqueued into Customer Queue
+Time: 216.876 Car24 deactivated
+Time: 216.876 Car11 dequeued from Customer Queue
+Time: 216.876 Wash_machine begins service of: Car11
+Time: 216.876 Wash_machine holds for 11.202
+Time: 222.5 Arrivals creating Car
+Time: 222.5 Arrivals  holds for 16.514
+Time: 222.5 Car25 joins queue 
+Time: 222.5 Car25 enqueued into Customer Queue
+Time: 222.5 Car25 deactivated
+Time: 222.5 Car12 dequeued from Customer Queue
+Time: 222.5 Wash_machine begins service of: Car12
+Time: 222.5 Wash_machine holds for 11.333
+Time: 228.078 Wash_machine completes service of: Car11
+Time: 228.078 Wash_machine goes idle
+Time: 228.078 Wash_machine deactivated
+Time: 228.078 Car11 terminating
+Time: 233.833 Wash_machine completes service of: Car12
+Time: 233.833 Wash_machine goes idle
+Time: 233.833 Wash_machine deactivated
+Time: 233.833 Car12 terminating
+Time: 239.014 Arrivals creating Car
+Time: 239.014 Arrivals  holds for 2.319
+Time: 239.014 Car26 joins queue 
+Time: 239.014 Car26 enqueued into Customer Queue
+Time: 239.014 Car26 deactivated
+Time: 239.014 Wash_machine goes idle
+Time: 239.014 Wash_machine deactivated
+Time: 241.333 Arrivals creating Car
+Time: 241.333 Arrivals  holds for 2.497
+Time: 241.333 Car27 joins queue 
+Time: 241.333 Car27 enqueued into Customer Queue
+Time: 241.333 Car27 deactivated
+Time: 241.333 Car13 dequeued from Customer Queue
+Time: 241.333 Wash_machine begins service of: Car13
+Time: 241.333 Wash_machine holds for 11.016
+Time: 243.83 Arrivals creating Car
+Time: 243.83 Arrivals  holds for 5.174
+Time: 243.83 Car28 joins queue 
+Time: 243.83 Car28 enqueued into Customer Queue
+Time: 243.83 Car28 deactivated
+Time: 243.83 Wash_machine goes idle
+Time: 243.83 Wash_machine deactivated
+Time: 249.004 Arrivals creating Car
+Time: 249.004 Arrivals  holds for 3.823
+Time: 249.004 Car29 joins queue 
+Time: 249.004 Car29 enqueued into Customer Queue
+Time: 249.004 Car29 deactivated
+Time: 249.004 Car14 dequeued from Customer Queue
+Time: 249.004 Wash_machine begins service of: Car14
+Time: 249.004 Wash_machine holds for 13.765
+Time: 252.349 Wash_machine completes service of: Car13
+Time: 252.349 Wash_machine goes idle
+Time: 252.349 Wash_machine deactivated
+Time: 252.349 Car13 terminating
+Time: 252.827 Arrivals creating Car
+Time: 252.827 Arrivals  holds for 1.213
+Time: 252.827 Car30 joins queue 
+Time: 252.827 Car30 enqueued into Customer Queue
+Time: 252.827 Car30 deactivated
+Time: 252.827 Wash_machine goes idle
+Time: 252.827 Wash_machine deactivated
+Time: 254.041 Arrivals creating Car
+Time: 254.041 Arrivals  holds for 6.607
+Time: 254.041 Car31 joins queue 
+Time: 254.041 Car31 enqueued into Customer Queue
+Time: 254.041 Car31 deactivated
+Time: 254.041 Car15 dequeued from Customer Queue
+Time: 254.041 Wash_machine begins service of: Car15
+Time: 254.041 Wash_machine holds for 11.181
+Time: 260.647 Arrivals creating Car
+Time: 260.647 Arrivals  holds for 0.492
+Time: 260.647 Car32 joins queue 
+Time: 260.647 Car32 enqueued into Customer Queue
+Time: 260.647 Car32 deactivated
+Time: 260.647 Wash_machine goes idle
+Time: 260.647 Wash_machine deactivated
+Time: 261.139 Arrivals creating Car
+Time: 261.139 Arrivals  holds for 25.267
+Time: 261.139 Car33 joins queue 
+Time: 261.139 Car33 enqueued into Customer Queue
+Time: 261.139 Car33 deactivated
+Time: 261.139 Car16 dequeued from Customer Queue
+Time: 261.139 Wash_machine begins service of: Car16
+Time: 261.139 Wash_machine holds for 12.112
+Time: 262.769 Wash_machine completes service of: Car14
+Time: 262.769 Wash_machine goes idle
+Time: 262.769 Wash_machine deactivated
+Time: 262.769 Car14 terminating
+Time: 265.222 Wash_machine completes service of: Car15
+Time: 265.222 Wash_machine goes idle
+Time: 265.222 Wash_machine deactivated
+Time: 265.222 Car15 terminating
+Time: 273.251 Wash_machine completes service of: Car16
+Time: 273.251 Wash_machine goes idle
+Time: 273.251 Wash_machine deactivated
+Time: 273.251 Car16 terminating
+Time: 286.406 Arrivals creating Car
+Time: 286.406 Arrivals  holds for 4.295
+Time: 286.406 Car34 joins queue 
+Time: 286.406 Car34 enqueued into Customer Queue
+Time: 286.406 Car34 deactivated
+Time: 286.406 Wash_machine goes idle
+Time: 286.406 Wash_machine deactivated
+Time: 290.701 Arrivals creating Car
+Time: 290.701 Arrivals  holds for 2.471
+Time: 290.701 Car35 joins queue 
+Time: 290.701 Car35 enqueued into Customer Queue
+Time: 290.701 Car35 deactivated
+Time: 290.701 Car17 dequeued from Customer Queue
+Time: 290.701 Wash_machine begins service of: Car17
+Time: 290.701 Wash_machine holds for 11.339
+Time: 293.172 Arrivals creating Car
+Time: 293.172 Arrivals  holds for 9.756
+Time: 293.172 Car36 joins queue 
+Time: 293.172 Car36 enqueued into Customer Queue
+Time: 293.172 Car36 deactivated
+Time: 293.172 Wash_machine goes idle
+Time: 293.172 Wash_machine deactivated
+Time: 302.04 Wash_machine completes service of: Car17
+Time: 302.04 Wash_machine goes idle
+Time: 302.04 Wash_machine deactivated
+Time: 302.04 Car17 terminating
+Time: 302.927 Arrivals creating Car
+Time: 302.927 Arrivals  terminating
+Time: 302.927 Car37 joins queue 
+Time: 302.927 Car37 enqueued into Customer Queue
+Time: 302.927 Car37 deactivated
+Time: 302.927 Wash_machine goes idle
+Time: 302.927 Wash_machine deactivated
 --------------------------------------------------------------- 
  
 End Simulation of Simple Car-Wash System
 date: 12/20/2018 time: 1:32
-Elapsed computer time: 492 miilisec
+Elapsed computer time: 438 miilisec
  

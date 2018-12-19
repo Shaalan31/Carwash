@@ -4,12 +4,12 @@ Simulation date: date: 12/20/2018 time: 1:32
 ----------------------------------------------------------
 Squeue: Customer Queue
 Capacity of queue: 40
-Number of observations: 66
-Max number of objects in queue: 23
-Average number of objects in queue: 3
-Average time in queue: 4.743705988952317
-Queue utilization: 0.25029989672178593
-Queue usage: 0.1362956104796807
+Number of observations: 54
+Max number of objects in queue: 20
+Average number of objects in queue: 2
+Average time in queue: 5.064250443497585
+Queue utilization: 0.24518701861236272
+Queue usage: 0.11415664541384139
 ----------------------------------------------------------
 Squeue: Customer Queue
 Capacity of queue: 40
@@ -31,23 +31,23 @@ Queue usage: NaN
 -----------------------------------------------------------------
 Random generator: Inter-arrival
 Distribution: Negative exponential
-Number of obs: 44
-Seed: 270
+Number of obs: 37
+Seed: 531
 Mean: 7.5
 -----------------------------------------------------------------
 Random generator: Service Period
 Distribution: Normal
-Number of obs: 44
-Seed: 287
+Number of obs: 37
+Seed: 548
 Mean: 11.25
 Standard deviation: 1.25
 ---------------------------------------------------------------- 
  
 End Simulation of Simple Car-Wash System
 date: 12/20/2018 time: 1:32
-Elapsed computer time: 492 millisec
+Elapsed computer time: 438 millisec
  
-Total number of cars serviced: 22
-Car average wait period: 84.365
-Average period car spends in the shop: 95.502
-Machine utilization: 0.444
+Total number of cars serviced: 17
+Car average wait period: 79.6
+Average period car spends in the shop: 90.623
+Machine utilization: 0.432
