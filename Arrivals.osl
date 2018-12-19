@@ -1,0 +1,77 @@
+use all psimjava
+description
+  The model of the Car-wash system
+  OOSimL version J Garrido, Jan 2008
+  This class defines the behavior of the environment
+  that generates car arrivals randomly.
+  The object of this class creates and starts the car objects
+  at specific instants called arrival events.
+  An negative exponential distribution is used to generate 
+  random numbers that correspond to the inter-arrival period.
+  The service periods for car objects are random
+  variables from a Normal distribution.
+  */
+class Arrivals as process is
+  
+  private
+  object references
+      // car inter-arrival random period
+      define  arrivalPeriod of class NegExp 
+      //
+      // car service period random number 
+      define  servicePeriod of class Normal  
+  public
+  function initializer parameters arrname of type string, 
+         Mean_arr of type double,
+         Mean_serv of type double,
+         stdserv of type double   is
+  begin
+    call super using arrname
+    //
+    // create random number generator using mean inter-arrival period
+    // exponential distribution
+    create arrivalPeriod of class NegExp using "Inter-arrival", 
+         Mean_arr 
+    //  
+    // create random number generator using mean service period
+    // Normal distribution
+    create servicePeriod of class Normal using "Service Period", 
+         Mean_serv, stdserv  
+    display arrname, " created"
+  endfun initializer
+  //
+  function Main_body is
+  variables
+       // inter-arrival period for car object
+       define inter_arr of type double 
+       // service period  
+       define serv_per of type double
+       define simclock of type double
+       define carname of type string
+  object references
+       define carobj of class Car
+  begin
+    assign simulation clock to simclock
+    display "Arrivals starting main body at: ", simclock
+    //
+    // repeat until time to close arrivals
+    while simclock < Carwash.close_arrival do
+      // generate inter-arr
+      assign random value from arrivalPeriod to inter_arr 
+      hold self for inter_arr       // wait for inter-arr
+      increment Carwash.num_arrived
+      //
+      // generate service interval
+      assign random value from servicePeriod to serv_per  
+      set simclock = get_clock()
+      display "Arrivals creating Car at: ", simclock
+      tracewrite "Arrivals creating Car"
+      set carname = "Car" concat Carwash.num_arrived
+      //
+      create carobj of class Car using carname, serv_per
+      start object carobj
+    endwhile
+    display "Arrivals terminates"
+    terminate self
+  endfun Main_body
+endclass Arrivals

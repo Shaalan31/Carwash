@@ -1,0 +1,258 @@
+  use all java.io
+  use java.text.DecimalFormat
+  use all psimjava
+  
+  description
+  A single-server model of a Car-wash system
+  arriving cars (customers) join a queue to wait for service.
+  The server is a car-wash machine that services one car at
+  a time. Service consists of a complete external wash of a car.
+  
+  OOSimL model J. Garrido, Jan 10, 2008
+  Main class: Carwash
+  
+  This class sets up simulation parameters and creates the
+  relevant objects.
+  There are four types of active objects of classes: Carwash, 
+   Server, Arrivals, and Car.
+  There is one passive object, the car_queue of class Squeue.
+  The arrivals object creates the various car objects that 
+  arrive at random intervals. 
+  Random variables: inter-arrival period of a negative exponential
+   distribution and service period of a Normal distribution.
+   
+  File: Carwash.osl
+  */
+  public class Carwash as process is
+     private
+     object references
+        //
+        // files for reporting
+        define  static statf of class PrintWriter  // statistics
+        define  static tracef of class PrintWriter // trace
+     public
+     variables
+        // input car queue size
+        define static totalQSize = 40 of type integer
+        // 
+        // simulation period   
+        define static simPeriod = 1200.0 of type double 
+        //
+        // time to close arrival of cars
+        define static close_arrival = 300.5 of type double 
+        //
+        // mean car inter-arrival interval
+        define static MeanInterarrival = 7.5 of type double 
+        //
+        // mean car service interval 
+        define static MeanServiceDur = 11.25 of type double  
+        //
+        // standard deviation of service interval
+        define StdServiceDur = 1.25 of type double
+        //
+        // Accumulative variables
+        //
+        // accumulated customer service time
+        define static custServiceTime = 0.0 of type double  
+        // accumulated customer sojourn time
+        define static custSojournTime = 0.0 of type double
+        // accumulated car waiting time  
+        define static custWaitTime = 0.0 of type double  
+        // accum server idle time
+        define static cap_of_server = 3 of type integer
+        define static num_of_queues=3 of type integer
+        define static accum_idle = 0.0 of type double    
+        // current number of customers serviced
+        define static num_serviced = 0 of type integer   
+        // current number of cars that arrived 
+        define static num_arrived = 0 of type integer    
+        // current number of cars rejected
+        define static num_rejected = 0 of type integer  
+        define static j of type integer
+        // 
+     object references  
+        //
+        // Simulation model essential objects
+        define static sim of class Simulation
+        //
+        // Queues for the model
+        // queue for arrived waiting cars
+        define static car_queue of class Squeue
+        define static car_queues array [] of class Squeue       
+        // 
+        // Classes for the active objects of the model
+        define static wash_machine of class Server
+        define static wash_machines array [ ] of class Server
+        //
+        define static genCust of class Arrivals  
+        define static shop of class Carwash 
+        define model of class SimModel
+        //
+      // constructor
+      function initializer parameters ss of class String is  
+      begin
+          call super using ss
+      endfun initializer
+      //
+      function main is
+      begin
+          // set-up simulation with an object of class simulation
+          simulation title "Simple Car-Wash System"
+          //
+          // setup files for reporting
+          trace file "carwtrace.txt"
+          statistics file "carwstatf.txt"
+          //
+          // create queues (passive objects)
+          //create car_queue of class Squeue using "Customer Queue", totalQSize
+          create car_queues array[num_of_queues] of class Squeue
+          for j = 0 to num_of_queues - 1 do
+              create car_queues[j] of class Squeue using "Customer Queue", totalQSize
+          endfor   
+
+          //
+          // Create and start the main active objects of the model
+          create shop of class Carwash using "Car Wash Shop"
+          start object shop
+      endfun main
+      //
+      // This function is called by the class object with interactive I/O
+      function pbegin parameters sm of class SimModel is
+        variables
+           define jin of type integer
+           define din of type double
+        begin 
+           set model = sm
+           call println of model using "Simple Model of a Car-Wash System"
+           // call model.println using "Input workload parameters for Car Wash Model"
+           // Input parameters
+           set jin = call model.readInt using "Type queue size (40): "
+           if jin > 0 then
+              set totalQSize = jin
+           endif
+           //
+           set din = model.readDouble("Type simulation period (1200.0): ")
+           if din > 0.0 then
+              set simPeriod = din
+           endif
+           //
+           set din = call model.readDouble using "Type close time (300.5): " 
+           if din > 0.0 then
+              set close_arrival = din
+           endif
+           //   
+           set din = model.readDouble("Type mean inter-arrival period (7.5): ")
+           if din > 0.0 then
+              set MeanInterarrival = din
+           endif
+           //
+           set din = call model.readDouble using "Type mean service period (11.25): " 
+           if din > 0.0 then
+              set MeanServiceDur = din
+           endif
+           //
+           set din = call model.readDouble using "Type service time standard dev (1.25): "
+           if din > 0.0 then
+              set StdServiceDur = din
+           endif
+           //
+           // set-up simulation
+           simulation title "Simple Model of Car-Wash System"
+           //
+           // Set up report files
+           trace file "carwtrace.txt"
+           statistics file "carwstatf.txt"
+           //
+           // Create  passive objects: queues
+           //create car_queue of class Squeue 
+             //   using "Customer Queue", totalQSize  
+          create car_queues array[num_of_queues] of class Squeue
+          for j = 0 to num_of_queues - 1 do
+              create car_queues[j] of class Squeue using "Customer Queue", totalQSize
+          endfor 
+           //
+           // start main active object in model
+           start self
+      endfun pbegin
+      //
+      //
+      method Main_body is
+      variables
+          define pname of type string
+          define machutil of type double
+          //
+          // formatting strings
+          define fmtout1 of type string
+          define fmtout2 of type string
+          define fmtout3 of type string
+          define dispouta of type string
+          define dispoutb of type string
+          //
+      object references
+          define dfmt of class DecimalFormat
+      begin
+          access statistics file
+          //
+          // create the other active objects of the model
+          //create wash_machine of class Server 
+          //       using "Wash_machine" 
+          create wash_machines array[cap_of_server] of class Server
+          for j = 0 to cap_of_server - 1 do
+              create wash_machines[j] of class Server using "Wash_machine"
+          endfor    
+          create genCust of class Arrivals 
+                 using "Arrivals ", MeanInterarrival, 
+                    MeanServiceDur, StdServiceDur
+          start thread genCust
+          for j = 0 to cap_of_server - 1 do
+              start thread wash_machines[j]
+          endfor
+          //start thread wash_machine
+          //
+          // display "Workload - car mean inter-arrival: ", 
+          //      MeanInterarrival, " mean service: ", MeanServiceDur
+          //
+          // starting simulation
+          start simulation with simPeriod
+          //
+          // set formatting to round output to 3 dec places
+          create dfmt of class DecimalFormat using "0.###"
+          //
+          display "Total number of cars serviced: ", num_serviced
+          statwrite "Total number of cars serviced: ", 
+               num_serviced                     
+          if num_serviced > 0 
+          then
+            set fmtout1 = call dfmt.format using custWaitTime/num_serviced
+            display "Car average wait period: ", fmtout1                     
+            statwrite "Car average wait period: ", fmtout1
+            //
+            set fmtout2 = call dfmt.format using 
+                                     custSojournTime/num_serviced         
+            display "Average period car spends in the shop: ", fmtout2
+            statwrite "Average period car spends in the shop: ",
+                     fmtout2
+          endif
+          //
+          // machine utilization
+          set machutil = (simPeriod - accum_idle)/simPeriod
+          set fmtout3 = call dfmt.format using machutil
+          //
+          statwrite "Machine utilization: ", fmtout3
+          display "Machine utilization: ", fmtout3
+          //
+          set dispouta = "Cars serviced: " concat 
+                     num_serviced concat "\n" concat
+                     "Avg wait: " concat 
+                     dfmt.format(custWaitTime / num_serviced) concat "\n" 
+          set dispoutb = dispouta concat
+                     "Mach util: " concat
+                     dfmt.format((simPeriod-accum_idle)/simPeriod) concat
+                     "\n" concat
+                     "Avg per in shop: " concat
+                     dfmt.format(custSojournTime/num_serviced)
+          //call model.println using dispoutb
+          exit     
+      endmethod Main_body
+  endclass Carwash
+  

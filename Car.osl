@@ -1,0 +1,98 @@
+use all psimjava
+description
+  The model of the car-wash system
+  OOSIMl version,  J Garrido, Feb. 2008
+
+  This class defines behavior of car objects
+  After a car object is created it joins the queue to wait for
+  service. It it finds the server object idle, 
+  it reactivates the server object.
+*/
+class Car as process
+ is  
+  private 
+  variables
+     define customerNum of type integer   // customer number
+     define arrivalTime of type double    // arrival time of customer
+     define service_dur of type double    // cust service interval
+     define j of type integer
+    define x of type integer
+    define min of type integer
+    define index of type integer
+  public
+  //
+  function initializer parameters cname of type string, 
+                                     dur of type double is
+  begin
+    call super using cname
+    set customerNum = Carwash.num_arrived
+    assign simulation clock to arrivalTime
+    set service_dur = dur
+    display cname, " arrives at time ", arrivalTime
+  endfun initializer
+  //
+  function get_arrivalT return type double is
+  begin
+     return arrivalTime
+  endfun get_arrivalT
+  //
+  function get_serv_dur return type double is
+  begin
+     return service_dur
+  endfun get_serv_dur
+  //
+  function Main_body is
+  variables
+      define simclock of type double
+      define pname of type string
+      define a of type double    // bogus
+  begin
+     assign clock to simclock
+     set pname = call get_name
+     display pname, " requests service at time ", simclock
+     // check if there is still space available in the carwash shop
+      set min = Carwash.totalQSize + 1
+          set index = 0
+          for j = 0 to Carwash.num_of_queues - 1 do
+          assign length of Carwash.car_queues[j] to x
+          if x < min
+          then
+            set x = min
+            set index = j
+          endif
+        endfor
+     if Carwash.car_queues[index] is not full  then     
+        // queue not full
+        display pname, " joins queue at time ", simclock
+        tracewrite pname, " joins queue "
+        insert self into Carwash.car_queues[index]  // enqueue this car
+        for j = 0 to Carwash.cap_of_server - 1 do
+          if Carwash.wash_machines[j] is idle
+          then
+
+              display "Activating server at time ", simclock
+              reactivate Carwash.wash_machines[j] now 
+              // call Thread.yield
+              set j = Carwash.cap_of_server - 1 
+          endif
+        endfor
+        //
+        suspend self                       // to wait for service        
+        // service completed, do final computation
+        increment Carwash.num_serviced     // customers serviced
+        // total time in the system: custSojournTime
+        assign simulation clock to simclock
+        set Carwash.custSojournTime = Carwash.custSojournTime + 
+                 (simclock - arrivalTime)
+        display pname, " terminates at ", simclock
+        terminate self                 // terminates itself      
+     else
+        // queue full, abandon hope                               
+        increment Carwash.num_rejected
+        display pname, " rejected, queue full "
+        tracewrite pname, " rejected, queue full "
+        terminate self                 // terminate this object
+     endif
+  endfun Main_body
+endclass Car
+

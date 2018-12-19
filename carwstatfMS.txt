@@ -1,0 +1,35 @@
+OOSimL model: Simple Car-Wash System
+Simulation date: date: 12/19/2018 time: 23:17
+--------------------STATISTICS REPORT----------------------------
+----------------------------------------------------------
+Squeue: Customer Queue
+Capacity of queue: 40
+Number of observations: 70
+Max number of objects in queue: 2
+Average number of objects in queue: 0
+Average time in queue: 0.389284615799113
+Queue utilization: 0.011567109309257119
+Queue usage: 0.006325875006735586
+-----------------------------------------------------------------
+Random generator: Inter-arrival
+Distribution: Negative exponential
+Number of obs: 35
+Seed: 588
+Mean: 7.5
+-----------------------------------------------------------------
+Random generator: Service Period
+Distribution: Normal
+Number of obs: 35
+Seed: 605
+Mean: 11.25
+Standard deviation: 1.25
+---------------------------------------------------------------- 
+ 
+End Simulation of Simple Car-Wash System
+date: 12/19/2018 time: 23:17
+Elapsed computer time: 454 millisec
+ 
+Total number of cars serviced: 35
+Car average wait period: 0.434
+Average period car spends in the shop: 11.889
+Machine utilization: 0.594

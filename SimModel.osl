@@ -1,0 +1,37 @@
+
+use all acm.program
+use all psimjava
+
+description
+  File: SimModel.java
+  ---------------------
+  This program uses the ACM classes
+  Car Wash simulation.
+  Because this version is a DialogProgram, 
+  the input and output appear as popup dialogs.
+  OOSimL model J Garrido (Nov 2009)
+ */
+class SimModel inherits DialogProgram is
+    public
+    object references
+       define static mymodel of class Carwash
+    
+    //
+  function run is
+    object references
+         define sm = self of class SimModel
+    begin
+      // display "Simple Car Wash simulation."
+      //
+      create mymodel of class Carwash using "Car Wash Simulation Model"
+      call pbegin of mymodel using sm
+      try begin
+          call this.wait       // wait for notification
+      endtry  
+      catch parameters e of class InterruptedException 
+       begin
+      endcatch          
+      //
+  endfun run
+endclass SimModel
+

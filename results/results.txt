@@ -1,0 +1,13 @@
+Single-Single
+Total number of cars: 27
+Car avg wait period:27.301
+Averege period in the shop: 38.385
+machine utilization:  0.977
+
+
+Multi-Single
+
+
+
+
+Multi-Multi

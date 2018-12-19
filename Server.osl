@@ -1,0 +1,125 @@
+
+use all psimjava
+description
+   OOSimL model of the car-wash system
+   
+   J Garrido, Feb. 2008
+
+   This class defines the server object, which
+    is the car-wash machine. It takes the car at 
+    the head of the queue and services the car. 
+    When the machine completes service of the car,
+    it gets another car from the queue.
+    If the queue is empty, it goes into its 
+    idle state (suspends itself)
+*/
+class Server as process is
+  private
+  variables
+  define static j of type integer
+  object references
+     define currentCustomer of class Car  // current customer
+      
+  function serviceCustomer is
+  variables
+     define startTime of type double       // time of start of service
+     define service_per of type double     // service period for car 
+     define objname of type string
+     define ccustname of type string
+     define ccustservt of type double      // cust service time
+     define simclock of type double
+         define X of type integer
+    define max of type integer
+    define index of type integer
+    
+  begin
+
+            set max = 0
+          set index = 0
+          for j = 0 to Carwash.num_of_queues - 1 do
+          assign length of Carwash.car_queues[j] to X
+          if X > max
+          then
+            set X = max
+            set index = j
+          endif
+        endfor
+     if Carwash.car_queues[index] is not empty
+     then
+        // get customer from head of waiting queue
+        remove currentCustomer of class Car from Carwash.car_queues[index] 
+        //
+        set objname = get_name()
+        set ccustname = currentCustomer.get_name()
+        // get cust service time
+        set ccustservt = currentCustomer.get_serv_dur() 
+        assign simulation clock to startTime  // service start time
+        display objname, " begins service of: ", ccustname, 
+           " at: ", startTime, " for ", ccustservt 
+        tracewrite objname, " begins service of: ", ccustname
+        //
+        // accumulate waiting time for this customer (car)
+        set Carwash.custWaitTime = Carwash.custWaitTime + 
+             (startTime - currentCustomer.get_arrivalT())
+        //
+        set service_per = currentCustomer.get_serv_dur()
+        hold self for service_per
+        //
+        assign simulation clock to simclock
+        add (simclock - startTime) to Carwash.custServiceTime  
+        display objname, " completes service of: ", ccustname, 
+            " at: ", simclock
+        tracewrite objname, " completes service of: ", ccustname        
+        reactivate currentCustomer now   // let car continue  
+     else
+        return
+     endif
+  endfun serviceCustomer  
+  //    
+  public
+  function initializer parameters sername of type string is
+  begin
+     call super using sername
+     // display sername, " created at: ", simclock
+  endfun initializer
+  //
+  function Main_body is
+  variables
+    define startIdle of type double
+    define idle_period of type double     // idle period
+    define simclock of type double        // simulation time
+    define cname of type string           // name attribute
+    define j of type integer
+  begin
+    set cname = get_name()
+    assign simulation clock to simclock
+    display cname, " starting main body at ", simclock
+    //
+    while simclock < Carwash.simPeriod do
+
+
+      for j = 0 to Carwash.num_of_queues-1 do
+      if Carwash.car_queues[j] is empty
+      then
+          // queue is empty
+          set startIdle = get_clock()  // starting time of idle period
+          display cname, " goes idle at ", simclock
+          tracewrite cname, " goes idle"
+          suspend self        // suspend server
+          //
+          // reactivated by a car object
+          // queue must now be nonempty
+          // display cname, " reactived"
+          set simclock = get_clock()
+          set idle_period = simclock- startIdle
+          add idle_period to Carwash.accum_idle
+          display cname, " reactivated at " + simclock
+      endif
+      endfor
+      call serviceCustomer   // service the car
+    endwhile
+    terminate self
+  endfun Main_body
+  //
+endclass Server
+
